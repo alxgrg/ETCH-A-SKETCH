@@ -1,8 +1,20 @@
 let grid = document.getElementById('grid');
+let button = document.getElementById('new-sketch');
 
-function buildGrid() {
-  for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
+buildGrid();
+
+let cells = document.getElementsByClassName('cell');
+cells = [...cells];
+
+cells.map((cell) => {
+  cell.addEventListener('mouseover', () => {
+    cell.classList.add('sketched');
+  });
+});
+
+function buildGrid(rows = 16, cols = 16) {
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
       const cell = document.createElement('div');
       cell.className = 'cell';
       cell.textContent = '';
@@ -11,4 +23,12 @@ function buildGrid() {
   }
 }
 
-buildGrid();
+function clearGrid() {
+  cells.forEach((cell) => {
+    cell.className = 'cell';
+  });
+}
+
+button.addEventListener('click', () => {
+  clearGrid();
+});
