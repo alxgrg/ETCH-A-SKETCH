@@ -11,7 +11,31 @@
   <body>
     <div id="app" class="main-container">
       <h1>ETCH-A-SKETCH</h1>
-      <button id="new-sketch">New Sketch</button>
+      <div class="actions">
+        <button id="new-sketch">New Sketch</button>
+        <form id="grid-form" class="grid-size">
+          <label for="rows">Rows:</label>
+          <input
+            type="number"
+            id="rows"
+            name="rows"
+            min="1"
+            max="100"
+            value="16"
+          />
+          <label for="cols">Columns:</label>
+          <input
+            type="number"
+            id="cols"
+            name="cols"
+            min="1"
+            max="100"
+            value="16"
+          />
+          <button type="submit" id="resize">Resize Grid</button>
+        </form>
+      </div>
+
       <div id="grid" class="sketch-container"></div>
     </div>
   </body>

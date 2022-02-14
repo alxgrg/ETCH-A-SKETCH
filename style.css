@@ -11,10 +11,9 @@ body {
 }
 
 .sketch-container {
-  margin-top: 50px;
-  display: grid;
-  grid-template-rows: repeat(16, 30px);
-  grid-template-columns: repeat(16, 30px);
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
 }
 
 .cell {
@@ -25,4 +24,11 @@ body {
 
 .sketched {
   background-color: black;
+}
+
+.grid-size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
