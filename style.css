@@ -1,1 +1,23 @@
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
 
+.main-container {
+  width: 80%;
+  margin: auto;
+}
+
+.sketch-container {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: repeat(16, 30px);
+  grid-template-columns: repeat(16, 30px);
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  border: 2px solid pink;
+}
