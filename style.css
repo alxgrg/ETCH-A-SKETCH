@@ -12,8 +12,10 @@ body {
 
 .sketch-container {
   margin-top: 25px;
+}
+
+.grid-row {
   display: flex;
-  justify-content: center;
 }
 
 .cell {

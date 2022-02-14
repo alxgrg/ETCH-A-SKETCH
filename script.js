@@ -25,15 +25,16 @@ function mapListeners() {
 
 function buildGrid(rows = 16, cols = 16) {
   grid.innerHTML = '';
-  for (let i = 0; i < cols; i++) {
-    let col = document.createElement('div');
-    for (let j = 0; j < rows; j++) {
+  for (let i = 0; i < rows; i++) {
+    let row = document.createElement('div');
+    row.className = 'grid-row';
+    for (let j = 0; j < cols; j++) {
       const cell = document.createElement('div');
       cell.className = 'cell';
       cell.textContent = '';
-      col.appendChild(cell);
+      row.appendChild(cell);
     }
-    grid.appendChild(col);
+    grid.appendChild(row);
   }
 }
 
