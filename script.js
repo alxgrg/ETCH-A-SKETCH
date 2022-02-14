@@ -23,23 +23,23 @@ function mapListeners() {
   });
 }
 
-function buildGrid(rows = 16, cols = 16) {
+function buildGrid(size = 16) {
   grid.innerHTML = '';
-  for (let i = 0; i < rows; i++) {
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+  for (let i = 0; i < size; i++) {
     let row = document.createElement('div');
-    row.className = 'grid-row';
-    for (let j = 0; j < cols; j++) {
+    for (let j = 0; j < size; j++) {
       const cell = document.createElement('div');
       cell.className = 'cell';
       cell.textContent = '';
-      row.appendChild(cell);
+      grid.appendChild(cell);
     }
-    grid.appendChild(row);
   }
 }
 
-function handleGridSizeChange(rows, cols) {
-  buildGrid(rows, cols);
+function handleGridSizeChange(size) {
+  buildGrid(size);
 }
 
 function handleClearGrid() {
@@ -55,9 +55,8 @@ clearButton.addEventListener('click', () => {
 
 gridSizeForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  let rows = event.target.elements['rows'].value;
-  let cols = event.target.elements['cols'].value;
-  handleGridSizeChange(rows, cols);
+  let size = event.target.elements['size'].value;
+  handleGridSizeChange(size);
   initCells();
   mapListeners();
 });

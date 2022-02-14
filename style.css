@@ -11,17 +11,13 @@ body {
 }
 
 .sketch-container {
-  margin-top: 25px;
-}
-
-.grid-row {
-  display: flex;
-}
-
-.cell {
-  width: 25px;
-  height: 25px;
-  border: 2px solid pink;
+  width: 650px;
+  height: 650px;
+  margin: 25px auto 0;
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
 }
 
 .sketched {
