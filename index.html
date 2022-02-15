@@ -10,23 +10,31 @@
   </head>
   <body>
     <div id="app" class="main-container">
-      <h1>ETCH-A-SKETCH</h1>
-      <div class="actions">
-        <button id="new-sketch">New Sketch</button>
-        <form id="grid-form" class="grid-size">
-          <input
-            type="number"
-            id="size"
-            name="size"
-            min="1"
-            max="100"
-            value="16"
-          />
-          <button type="submit" id="resize">Resize Grid</button>
-        </form>
-      </div>
-      <div class="wrapper">
-        <div id="grid" class="sketch-container"></div>
+      <div class="container">
+        <div class="actions">
+          <button id="new-sketch">New Sketch</button>
+          <div class="slider-container">
+            <label for="size">Pen size:</label>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="85"
+              class="slider"
+              id="size"
+            />
+          </div>
+          <div class="tools">
+            <p>Tools</p>
+            <button class="pen">Pen</button>
+            <button class="eraser">Eraser</button>
+            <button class="cells-uni">Unicorn Vomit</button>
+          </div>
+        </div>
+        <div class="wrapper">
+          <h1>ETCH-A-SKETCH</h1>
+          <div id="grid" class="sketch-container"></div>
+        </div>
       </div>
     </div>
   </body>

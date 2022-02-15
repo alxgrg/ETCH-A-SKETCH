@@ -10,10 +10,16 @@ body {
   text-align: center;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .sketch-container {
-  width: 650px;
-  height: 650px;
-  margin: 25px auto 0;
+  width: 600px;
+  height: 600px;
+  margin: auto;
   display: grid;
   border: 1px solid black;
   grid-template-columns: repeat(16, 1fr);
@@ -29,4 +35,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+}
+
+.slider-container {
+  display: flex;
 }
