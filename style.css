@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: rgb(24, 24, 24);
+  color: white;
 }
 
 .main-container {
@@ -12,22 +14,20 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .sketch-container {
+  background-color: white;
   width: 600px;
   height: 600px;
   margin: auto;
+  margin-left: 1.5rem;
   display: grid;
   border: 1px solid black;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(16, 1fr);
-}
-
-.sketched {
-  background-color: black;
 }
 
 .grid-size {
@@ -39,4 +39,21 @@ body {
 
 .slider-container {
   display: flex;
+  margin: 15px 0 15px;
+}
+
+.button {
+  padding: 8px;
+  background-color: #464646;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.button:hover {
+  background-color: #636363;
+}
+
+.button:active {
+  background-color: #464646;
 }
