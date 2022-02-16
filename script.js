@@ -20,21 +20,8 @@ function initCells() {
   cells = [...cells];
 }
 
-// function mapListeners() {
-//   cells.map((cell) => {
-//     cell.addEventListener('mouseover', () => {
-//       if (cellColor === 'random') {
-//         cell.style.backgroundColor =
-//           '#' + Math.floor(Math.random() * 16777215).toString(16);
-//       } else {
-//         cell.style.backgroundColor = cellColor;
-//       }
-//     });
-//   });
-// }
-
 function mapListeners() {
-  cells.map((cell) => {
+  cells.forEach((cell) => {
     cell.addEventListener('mousedown', () => {
       isSketching = true;
       if (cellColor === 'random') {
